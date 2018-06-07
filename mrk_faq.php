@@ -39,27 +39,32 @@ class MRK_FAQ_Main_Class
 
 	public function commonHooks()
 	{
-		# code...
+
+		add_action('init', array('\MRK_FAQ\Classes\PostTypeClass', 'initMRKFAQPostType') );
+
+		
 	}
 
 
 
 	public function adminHooks()
 	{
-		# code...
+		add_action('admin_menu', array('MRK_FAQ\Classes\SettingsClass', 'addSettingsFAQ') );
+		add_action('wp_ajax_mrk_faq_save_settings', array('MRK_FAQ\Classes\SettingsClass ','saveSettings') );
+
 	}
 
 
 
 	public function enqueueScripts()
 	{
-		# code...
+		
 	}
 
 
 	public function loadTextDomain()
 	{
-		# code...
+		
 	}
 
 	
