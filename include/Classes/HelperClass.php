@@ -18,7 +18,7 @@ class HelperClass
 				return '';
 			}
 			ob_start();
-			include $filePath
+			include $filePath;
 			return ob_get_clean();
 		}	
 

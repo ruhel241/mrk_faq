@@ -31,10 +31,10 @@ class MRK_FAQ_Main_Class
 	{
 		$this->commonHooks();
 		$this->adminHooks();
-		$this->enqueueScripts();
+		
 		$this->loadTextDomain();
 	}
-
+ 
 
 
 	public function commonHooks()
@@ -42,7 +42,10 @@ class MRK_FAQ_Main_Class
 
 		add_action('init', array('\MRK_FAQ\Classes\PostTypeClass', 'initMRKFAQPostType') );
 
-		
+		$shortCodeClass = new MRK_FAQ\Classes\ShortCodeClass();
+		add_shortcode('mrk_faq', array($shortCodeClass, 'register') ); 
+
+		add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
 	}
 
 
@@ -58,7 +61,10 @@ class MRK_FAQ_Main_Class
 
 	public function enqueueScripts()
 	{
-		
+		wp_register_style('mrk_faq_style', MRK_FAQ_PLUGIN_URL.'assets/style.css', array(), MRK_FAQ_VERSION);
+		wp_enqueue_style('mrk_faq_style');
+
+		wp_enqueue_script('mrk_faq_custom_js', MRK_FAQ_PLUGIN_URL.'assets/custom.js', array('jquery'), MRK_FAQ_VERSION);
 	}
 
 

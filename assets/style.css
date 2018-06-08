@@ -1,0 +1,58 @@
+/*common style*/
+
+/*common style end*/
+
+/*default*/
+.faq_wrapper{
+	display: block;
+	overflow: hidden;
+	width: 100%
+}
+
+.single_faq {
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
+
+.single_faq .faq_title {
+    border-bottom: solid 1px #ddd;
+    margin: 0 0 8px 0;
+    cursor: pointer;
+    padding-bottom: 10px;
+    position: relative;
+     padding-left: 39px; 
+}
+
+.single_faq .faq_title::before{
+	background: none repeat scroll 0 0 #666;
+    color: #fff;
+    content: "+";
+    height: 30px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 30px;
+    line-height: 30px;
+    margin-top: 6px;
+}
+
+.single_faq .faq_content{
+	margin-bottom: 10px;
+    display: block;
+    padding-left: 30px;
+    text-align: justify;
+}
+
+
+/*single*/
+
+
+
+
+
+
+
+
+

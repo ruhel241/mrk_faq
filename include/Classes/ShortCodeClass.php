@@ -8,15 +8,19 @@ namespace MRK_FAQ\Classes;
 class ShortCodeClass 
 {
 
-	public static function register( $atts )
+	public static function register( $atts ) 
 	{
 		$defaults = apply_filters('mrk_faq_shortcode_defaults', array(
 		 'display'  => 'default',
+		 'post_type'=> \MRK_FAQ\Classes\PostTypeClass::$postTypeName,
 		 'limit'    =>  -1,
-		 'taxonomy' => false,
-		 'category' => false,
+		 // 'taxonomy' => false,
+		 // 'category' => false,
+		 'faq_cat'  => false,
+		 'faq_tag'  => false,
 		 'relation' => 'OR',
-		 'color' 	=> 'red',
+		 'color' 	=> false,
+		 'theme' 	=> false,
 		 'offset'	=> 0,
 		));
 
@@ -33,9 +37,9 @@ class ShortCodeClass
 	{
 		$displayArray = array(
 			'simple' => 'simple_faq',
-			'theme_one' => 'theme_one_faq',
-			'theme_two' => 'theme_two_faq',
-			'theme_three' => 'theme_three_faq',
+			// 'theme_one' => 'theme_one_faq',
+			// 'theme_two' => 'theme_two_faq',
+			// 'theme_three' => 'theme_three_faq',
 		);
 
 		$return = 'default';
@@ -46,9 +50,6 @@ class ShortCodeClass
 
 		return apply_filters( 'mrk_faq_get_view_name_by_display', $return , $display );
 	}
-
-
-
 
 
 
