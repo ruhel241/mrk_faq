@@ -1,58 +1,141 @@
 /*common style*/
 
+.ninja_faq_wrapper_group {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ninja_faq_wrapper_group p {
+  margin: 0;
+  padding: 0;
+}
+
 /*common style end*/
 
 /*default*/
-.faq_wrapper{
-	display: block;
-	overflow: hidden;
-	width: 100%
+
+.nf_single_faq .faq_title {
+  border-bottom: solid 1px #ddd;
+  margin: 0 0 8px 0;
+  cursor: pointer;
+  padding-bottom: 10px;
+  position: relative;
+  padding-left: 39px;
 }
 
-.single_faq {
-	width: 100%;
-	overflow: hidden;
-	display: block;
+.nf_single_faq .faq_title .faq_add_icon::before {
+  background: none repeat scroll 0 0 #666;
+  color: #fff;
+  content: "+";
+  height: 30px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 30px;
+  line-height: 30px;
+  margin-top: 6px;
 }
 
-.single_faq .faq_title {
-    border-bottom: solid 1px #ddd;
-    margin: 0 0 8px 0;
-    cursor: pointer;
-    padding-bottom: 10px;
-    position: relative;
-     padding-left: 39px; 
+.nf_single_faq .faq_title .faq_minus_icon::before {
+  background: none repeat scroll 0 0 #666;
+  color: #fff;
+  content: "-";
+  height: 30px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 30px;
+  line-height: 30px;
+  margin-top: 6px;
 }
 
-.single_faq .faq_title::before{
-	background: none repeat scroll 0 0 #666;
-    color: #fff;
-    content: "+";
-    height: 30px;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 30px;
-    line-height: 30px;
-    margin-top: 6px;
+.nf_single_faq .faq_content {
+  margin-bottom: 10px;
+  display: block;
+  padding-left: 30px;
+  text-align: justify;
 }
 
-.single_faq .faq_content{
-	margin-bottom: 10px;
-    display: block;
-    padding-left: 30px;
-    text-align: justify;
+/*simple*/
+
+.nf_simple_faq {
+  background: #f8f8f8;
+  border: solid 1px #ddd;
 }
 
+.nf_simple_faq .faq_title {
+  border-bottom: 1px solid #ddd;
+  /*font-weight: normal;*/
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
 
-/*single*/
+.nf_simple_faq .faq_title:hover {
+  background: white;
+}
 
+.nf_simple_faq .faq_content {
+  background: white;
+  padding: 15px;
+  display: block;
+  text-align: justify;
+}
 
+/*Simple two FAQ*/
 
+.nf_simple_two_single {
+  padding: 5px;
+}
 
+.nf_simple_two_single:hover {
+  background: #f5f4eb;
+}
 
+.nf_simple_two_single .faq_title {
+  cursor: pointer;
+  margin: 0;
+  border-bottom: solid 1px #ddd;
+  padding: 7px;
+  padding-bottom: 10px;
+}
 
+.nf_simple_two_single .faq_title .nf_simple_up_icon::after {
+  content: ">";
+  position: relative;
+  float: right;
+  /*right: 10px;*/
+}
 
+.nf_simple_two_single .faq_title .nf_simple_down_icon::after {
+  content: "<";
+  position: relative;
+  float: right;
+  /*right: 10px;*/
+}
 
+.nf_simple_two_single .faq_content {
+  padding: 10px;
+  text-align: justify;
+  display: block;
+}
+
+/*Simple three FAQ*/
+
+.nf_simple_three_single {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 30px;
+  margin: 20px;
+}
+
+.nf_simple_three_single:last-of-type {
+  border-bottom: none;
+}
+
+.nf_simple_three_single .faq_three_title {
+  margin: 0px 0px 10px 0px;
+}
 

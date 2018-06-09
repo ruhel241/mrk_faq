@@ -37,6 +37,8 @@ class ShortCodeClass
 	{
 		$displayArray = array(
 			'simple' => 'simple_faq',
+			'simple_two' => 'simple_two_faq',
+			'simple_three' => 'simple_three_faq',
 			// 'theme_one' => 'theme_one_faq',
 			// 'theme_two' => 'theme_two_faq',
 			// 'theme_three' => 'theme_three_faq',
