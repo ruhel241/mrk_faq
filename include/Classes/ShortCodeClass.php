@@ -19,6 +19,7 @@ class ShortCodeClass
 		 'faq_cat'  => false,
 		 'faq_tag'  => false,
 		 'relation' => 'OR',
+		 'per_grid' => 2,
 		 'color' 	=> false,
 		 'theme' 	=> false,
 		 'offset'	=> 0,
@@ -36,10 +37,10 @@ class ShortCodeClass
 	public static function getViewNameByDisplay($display)
 	{
 		$displayArray = array(
-			'simple' => 'simple_faq',
-			'simple_two' => 'simple_two_faq',
-			'simple_three' => 'simple_three_faq',
-			// 'theme_one' => 'theme_one_faq',
+			'simple' 	  => 'simple_faq',
+			'simple_two'  => 'simple_two_faq',
+			'simple_three'=> 'simple_three_faq',
+			'grid'  	  => 'grid_items',
 			// 'theme_two' => 'theme_two_faq',
 			// 'theme_three' => 'theme_three_faq',
 		);

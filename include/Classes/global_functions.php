@@ -17,10 +17,11 @@
 		}
 
 		return MRK_FAQ\Classes\HelperClass::makeView($view_file, array(
-			'faqs'  => $faqItems,
-			'display' => $display,
-			'color' => $color,
-			'theme' => $theme,
+			'faqs'  	=> $faqItems,
+			'display'   => $display,
+			'color' 	=> $color,
+			'theme' 	=> $theme,
+			'per_grid'  => $per_grid,
 		));
 	}
 

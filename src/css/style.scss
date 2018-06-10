@@ -3,7 +3,7 @@
     display: block;
     overflow: hidden;
     width: 100%;
-    p {
+  	p {
 		margin: 0;
 		padding: 0;
 	}
@@ -36,7 +36,6 @@ $nf_graycolor: #ddd;
 		    top: 0;
 		    width: 30px;
 		    line-height: 30px;
-		    margin-top: 6px;
 		}
 		.faq_minus_icon::before {
 			background: none repeat scroll 0 0 #666;
@@ -49,7 +48,6 @@ $nf_graycolor: #ddd;
 		    top: 0;
 		    width: 30px;
 		    line-height: 30px;
-		    margin-top: 6px;
 		}
 	}
 	
@@ -58,6 +56,7 @@ $nf_graycolor: #ddd;
 	    display: block;
 	    padding-left: 30px;
 	    text-align: justify;
+	    padding-bottom: 30px;
 	}
 }
 
@@ -68,7 +67,6 @@ $nf_graycolor: #ddd;
    border: solid 1px $nf_graycolor;
 	.faq_title {
 	    border-bottom: 1px solid $nf_graycolor;
-	    /*font-weight: normal;*/
 	    margin: 0;
 	    padding: 10px;
 	    cursor: pointer;
@@ -98,16 +96,14 @@ $nf_graycolor: #ddd;
 	    padding: 7px;
 	    padding-bottom: 10px;
 		.nf_simple_up_icon::after {
-			content: ">";
+			content: "+";
 		    position: relative;
 		    float: right;
-		    /*right: 10px;*/
 		}
 		.nf_simple_down_icon::after {
-			content: "<";
+			content: "-";
 		    position: relative;
 		    float: right;
-		    /*right: 10px;*/
 		}
 	}
 	.faq_content{
@@ -139,7 +135,57 @@ $nf_graycolor: #ddd;
 
 
 
+/* grid items */
 
+.nf_grid_faq {
+
+	.nf_grid_3 {
+		width: 33%;
+		display: block;
+		float: left;
+		margin-bottom: 30px;
+		&:nth-child(3n+1){
+			clear: both;
+		}
+	}
+
+	.nf_grid_2 {
+		width: 50%;
+		display: block;
+		float: left;
+		margin-bottom: 30px;
+	}
+
+	.nf_grid_1 {
+		width: 100%;
+		display: block;
+		float: none;
+		.faq_grid_content {
+		    padding-top: 20px;
+		    padding-right: 30px;
+		    line-height: 1.5em;
+		}
+	}
+
+	.nf_grid {
+		display: block;
+	    overflow: hidden;
+	    padding: 5px;
+	}
+
+	.faq_grid_title {
+		padding: 0;
+		margin: 0;
+	}
+
+	.faq_grid_content {
+	  	padding-top: 30px;
+	    padding-right: 30px;
+	    padding-bottom: 30px;
+	    line-height: 1.5em;
+	}
+
+}
 
 
 
