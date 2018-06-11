@@ -19,13 +19,13 @@
                                     <div class="nf_inline_form_items">
                                         
                                         <label m-for="nf_display, nf_displaykey in nf_displays">
-                                                <input name="display_type"  m-literal:value="nf_displaykey" type="radio"> {{ nf_display.label }}
+                                                <input name="display_type" m-model="shortCode.nf_display" m-literal:value="nf_displaykey" type="radio"> {{ nf_display.label }}
                                         </label>
 
                                      </div>
                                 </div>
                                 <div class="nf_form_group">
-                                    <label>
+                                    <label m-if="shortCode.nf_display == 'grid_items'">
                                         Item Per Grid
                                         <input type="number" max="3" min="1" value="2"/>
                                     </label>
@@ -38,7 +38,7 @@
                                     <label> FAQ Categories Type </label>
                                     <div class="nf_inline_form_items">
                                           <label><input name="faq_category_type"  type="radio" checked> All </label>
-                                          <label><input name="faq_category_type"  type="radio"> Selected Categories </label>
+                                          <label m-model="shortCode." ><input name="faq_category_type"  type="radio"> Selected Categories </label>
                                     </div>
                                 </div>
                                 <div class="nf_form_group">
@@ -100,7 +100,8 @@
                     shortCode: {
                         display: 'default',
                         per_grid: 2,
-                        all_faq_cat: true,
+                        all_faq_cats: true,
+                        all_faq_tags: true,
                         selectedFaq: [],
                     }
                 },
