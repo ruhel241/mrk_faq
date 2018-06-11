@@ -60,45 +60,61 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
-__webpack_require__(2);
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
-/* 1 */
+
+/***/ 5:
 /***/ (function(module, exports) {
 
-jQuery(document).ready(function () {
-	jQuery('.faq_title').on('click', function (e) {
-		jQuery(this).parent().find('.faq_content').slideToggle(300);
-
-		jQuery(this).find(".faq_add_icon").toggle();
-		jQuery(this).find(".faq_minus_icon").toggle();
-
-		jQuery(this).find(".nf_simple_up_icon").toggle();
-		jQuery(this).find(".nf_simple_down_icon").toggle();
-	});
-});
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+(function () {
+    var mrkFAQModalApp = {
+        insertDom: function insertDom() {
+            jQuery('body').append('<div style="display: none;" class="mrk_faq_shortcode_builder_pop_up" id="mrk_faq_pop_up"> \n\n            </div>');
+        },
+        showModal: function showModal(editor) {
+            window.currentCarEditor = editor;
+            jQuery('#mrk_faq_pop_up').show();
+        },
+        closeModal: function closeModal() {
+            jQuery('#mrk_faq_pop_up').hide();
+        },
+        initShortCodeBuilder: function initShortCodeBuilder() {},
+        initTinyMce: function initTinyMce() {
+            var mainApp = this;
+            tinymce.PluginManager.add('mrk_faq_mce_class', function (editor, url) {
+                // Add Button to Visual Editor Toolbar
+                editor.addButton('mrk_faq_mce_class', {
+                    title: 'Insert Ninja FAQ Shortcode',
+                    cmd: 'mrk_faq_mce_command'
+                });
+                editor.addCommand('mrk_faq_mce_command', function () {
+                    mainApp.showModal(editor);
+                    // alert("Opened");
+                });
+                jQuery('.car_pop_close').on('click', function () {
+                    mainApp.closeModal();
+                });
+            });
+        },
+        init: function init() {
+            this.insertDom();
+            this.initTinyMce();
+            this.initShortCodeBuilder();
+        }
+    };
+    carShopModalApp.init();
+})();
 
 /***/ })
-/******/ ]);
+
+/******/ });
