@@ -3,3 +3,93 @@
   background-size: contain;
 }
 
+div#mrk_faq_pop_up .mrk_faq_pop_shadow {
+  background: #000;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100050;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container {
+  position: absolute;
+  width: 40%;
+  min-width: 600px;
+  top: 150px;
+  left: 0%;
+  right: 0%;
+  background: oldlace;
+  z-index: 100100;
+  color: black;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_header {
+  padding: 5px 0px 5px 15px;
+  color: #6c6b6b;
+  border-bottom: 1px solid #ddd;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_header span.mrkFAQ_pop_close {
+  float: right;
+  border-left: 1px solid #ddd;
+  padding-left: 10px;
+  display: block;
+  color: black;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body {
+  padding: 20px;
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 26px;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group:last-of-type {
+  border-bottom: none;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group .nf_form_group > label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group .nf_form_group .nf_inline_form_items {
+  padding-bottom: 15px;
+}
+
+div#mrk_faq_pop_up .mrk_pop_container .nf_pop_footer .nf_insert_button {
+  float: right;
+  position: relative;
+  /* top: 10px; */
+  bottom: 13px;
+  /* left: 10px; */
+  right: 25px;
+  /* width: 100%; */
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #428bca;
+  color: white;
+  cursor: pointer;
+  border-color: #357ebd;
+}
+

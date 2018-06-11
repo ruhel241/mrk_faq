@@ -30,5 +30,51 @@ class HelperClass
 	
 
 
+		public static function getNFDisplayTypes()
+		{
+			return array(
+				'default' 		=> array(
+					'label' => 'Default'
+				),
+
+				'simple_faq' 		=> array(
+					'label' => 'Simple One'
+				),
+
+				'simple_two_faq' 		=> array(
+					'label' => 'Simple Two'
+				),
+
+				'simple_three_faq' 		=> array(
+					'label' => 'Simple Three'
+				),
+				'grid_items' 		=> array(
+					'label' => 'Multiple Grid Style'
+				)
+			);
+		}
+
+
+
+		public static function getNFTermsFormatted($args = array())
+		{
+			$terms = get_terms($args);
+			$formatted = array();
+
+			if(is_wp_error($terms) ){
+			  return $formatted;
+			}
+
+			foreach ($terms as $term) {
+				$formatted[$term->slug] = $term->name;
+			}
+
+			return $formatted; 
+		}
+
+
+
+
+
 
 }

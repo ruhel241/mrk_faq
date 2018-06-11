@@ -55,29 +55,25 @@ class TinyMceClass
 
 	public static function localizeVars() {
 	
-		// $displayTypes = HelperClass::getCarDisplayTypes(); 
-		// $brandTypes    = HelperClass::getCarTermsFormatted( array(
-		// 	'taxonomy'   => PostTypeClass::$carBrandName,
-		// 	'hide_empty' => false,
-		// ) );
-		// $modelTypes    = HelperClass::getCarTermsFormatted( array(
-		// 	'taxonomy'   => PostTypeClass::$carModelName,
-		// 	'hide_empty' => false,
-		// ) );
-		// $madeTypes    = HelperClass::getCarTermsFormatted( array(
-		// 	'taxonomy'   => PostTypeClass::$carMadeName,
-		// 	'hide_empty' => false,
-		// ) );
+		$nfdisplayTypes = HelperClass::getNFDisplayTypes(); 
+		
+		$nfCategories    = HelperClass::getNFTermsFormatted( array(
+			'taxonomy'   => PostTypeClass::$faqCatName,
+			'hide_empty' => false,
+		) );
 
+		$nfTags    = HelperClass::getNFTermsFormatted( array(
+			'taxonomy'   => PostTypeClass::$faqTagName,
+			'hide_empty' => false,
+		) );
 
 		?>
         <script type="text/javascript">
-          /*  var car_ShopMceVars = {
-                displayTypes: <?php //echo json_encode( $displayTypes ); ?>,
-                brandTypes: <?php //echo json_encode($brandTypes); ?>,
-                modelTypes: <?php //echo json_encode($modelTypes); ?>,
-                madeTypes: <?php //echo json_encode($madeTypes); ?>
-            } */
+          var nf_MceVars = {
+                nfdisplayTypes: <?php echo json_encode( $nfdisplayTypes ); ?>,
+                nfCategories: <?php echo json_encode($nfCategories); ?>,
+                nfTags: <?php echo json_encode($nfTags); ?>,
+            } 
         </script>
 		<?php
 	}
