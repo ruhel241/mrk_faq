@@ -17,12 +17,10 @@
                                 <div class="nf_form_group">
                                     <label> FAQ Display Type </label>
                                     <div class="nf_inline_form_items">
-                                        
                                         <label m-for="nf_display, nf_displaykey in nf_displays">
                                                 <input name="display_type" m-model="shortCode.nf_display" m-literal:value="nf_displaykey" type="radio"> {{ nf_display.label }}
                                         </label>
-
-                                     </div>
+                                    </div>
                                 </div>
                                 <div class="nf_form_group">
                                     <label m-if="shortCode.nf_display == 'grid_items'">
@@ -38,15 +36,18 @@
                                     <label> FAQ Categories Type </label>
                                     <div class="nf_inline_form_items">
                                           <label><input name="faq_category_type"  type="radio" checked> All </label>
-                                          <label m-model="shortCode." ><input name="faq_category_type"  type="radio"> Selected Categories </label>
+                                          <label><input name="faq_category_type"  type="radio"> Selected Categories </label>
                                     </div>
                                 </div>
                                 <div class="nf_form_group">
                                     <label> Select Categories Types that you want to show</label>
                                     <div class="nf_inline_form_items">
-                                          <label><input name="faq_category_type"  type="checkbox"> Shirt </label>
-                                          <label><input name="faq_category_type"  type="checkbox"> Pant </label>
-                                          <label><input name="faq_category_type"  type="checkbox"> T-shirt </label>
+                                         
+                                        <label m-for="nf_Category, nf_CategoryKey in nf_Categories">
+                                            <input name="faq_category_type" m-on:change="changeData(nf_CategoryKey, 'selectedFaqCats')"  type="checkbox"> {{ nf_Category }} 
+                                        </label>
+
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -102,12 +103,25 @@
                         per_grid: 2,
                         all_faq_cats: true,
                         all_faq_tags: true,
-                        selectedFaq: [],
+                        selectedFaqCats: [],
+                        selectedFaqTags: [],
                     }
                 },
-                methods: {
+                
 
+                computed: {
                 },
+                methods: { 
+                    changeData(key, type) {
+                        let prevalues = this.get('shortCode')[type];
+                        if (prevalues.indexOf(key) == -1) {
+                            prevalues.push(key);
+                        } else {
+                            prevalues.splice(prevalues.indexOf(key), 1);
+                        }
+                    },
+                },
+
                 hooks: {
                     mounted: function() {
                         console.log("APP Mounted");
