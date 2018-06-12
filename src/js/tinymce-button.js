@@ -17,15 +17,17 @@
                                 <div class="nf_form_group">
                                     <label> FAQ Display Type </label>
                                     <div class="nf_inline_form_items">
+
+
                                         <label m-for="nf_display, nf_displaykey in nf_displays">
-                                                <input name="display_type" m-model="shortCode.nf_display" m-literal:value="nf_displaykey" type="radio"> {{ nf_display.label }}
+                                            <input name="display_type" m-model="shortCode.nf_display" m-literal:value="nf_displaykey" type="radio"> {{ nf_display.label }}
                                         </label>
                                     </div>
                                 </div>
                                 <div class="nf_form_group">
                                     <label m-if="shortCode.nf_display == 'grid_items'">
                                         Item Per Grid
-                                        <input type="number" max="3" min="1" value="2"/>
+                                        <input type="number" max="3" min="1" m-model="shortCode.per_grid" />
                                     </label>
                                 </div>
                             </div> 
@@ -35,19 +37,20 @@
                                 <div class="nf_form_group">
                                     <label> FAQ Categories Type </label>
                                     <div class="nf_inline_form_items">
-                                          <label><input name="faq_category_type"  type="radio" checked> All </label>
-                                          <label><input name="faq_category_type"  type="radio"> Selected Categories </label>
+                                          <label>
+                                            <input m-model="shortCode.all_faq_cats" m-literal:value="true" name="faq_category_type"  type="radio"> All 
+                                          </label>
+                                          <label>
+                                             <input m-model="shortCode.all_faq_cats" m-literal:value="false" name="faq_category_type"  type="radio"> Selected Categories 
+                                          </label>
                                     </div>
                                 </div>
-                                <div class="nf_form_group">
+                                <div m-if="shortCode.all_faq_cats == false" class="nf_form_group">
                                     <label> Select Categories Types that you want to show</label>
                                     <div class="nf_inline_form_items">
-                                         
-                                        <label m-for="nf_Category, nf_CategoryKey in nf_Categories">
-                                            <input name="faq_category_type" m-on:change="changeData(nf_CategoryKey, 'selectedFaqCats')"  type="checkbox"> {{ nf_Category }} 
+                                        <label m-for="nf_category, nf_categoryKey in nf_categories">
+                                            <input name="faq_category_type" m-on:change="changeData(nf_categoryKey, 'selectedFaqCats')"  type="checkbox"> {{ nf_category }} 
                                         </label>
-
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -56,16 +59,16 @@
                                 <div class="nf_form_group">
                                     <label> FAQ Tags Type </label>
                                     <div class="nf_inline_form_items">
-                                          <label><input name="faq_tag_type"  type="radio" checked> All </label>
-                                          <label><input name="faq_tag_type"  type="radio"> Selected Tags </label>
+                                          <label><input m-model="shortCode.all_faq_tags" m-literal:value="true" name="faq_tag_type"  type="radio"> All </label>
+                                          <label><input m-model="shortCode.all_faq_tags" m-literal:value="false" name="faq_tag_type"  type="radio"> Selected Tags </label>
                                     </div>
                                 </div>
-                                <div class="nf_form_group">
+                                <div m-if="shortCode.all_faq_tags == false" class="nf_form_group">
                                     <label> Select Tags Types that you want to show</label>
                                     <div class="nf_inline_form_items">
-                                          <label><input name="faq_category_type"  type="checkbox"> Shirt </label>
-                                          <label><input name="faq_category_type"  type="checkbox"> Pant </label>
-                                          <label><input name="faq_category_type"  type="checkbox"> T-shirt </label>
+                                          <label m-for="nf_tag, nf_tagKey in nf_tags">
+                                            <input name="faq_tag_type" m-on:change="changeData(nf_tagKey, 'selectedFaqTags')" type="checkbox"> {{nf_tag}} 
+                                          </label>
                                     </div>
                                 </div>
                             </div>
@@ -73,9 +76,9 @@
 
 
                     <div class="nf_pop_footer">
-                        <button class="nf_insert_button"> Insert Shortcode </button>
+                        <button m-on:click="nf_insertSortCode"  class="nf_insert_button" id=""> Insert Shortcode </button>
                     </div>
-
+                   
 
 
                 </div>
@@ -83,7 +86,7 @@
         `);
         },
         showModal(editor) {
-            window.currentCarEditor = editor;
+            window.currentNFEditor = editor;
             jQuery('#mrk_faq_pop_up').show();
         },
         closeModal() {
@@ -91,6 +94,7 @@
         },
 
         initShortCodeBuilder() {
+            let mainApp = this;
             window.moonApp2 = new Moon({
                 el: "#ninja_faq_moon",
                 data: {
@@ -99,11 +103,11 @@
                     nf_tags: window.nf_MceVars.nfTags,
                     myData: [1, 2],
                     shortCode: {
-                        display: 'default',
+                        nf_display: 'default',
                         per_grid: 2,
                         all_faq_cats: true,
-                        all_faq_tags: true,
                         selectedFaqCats: [],
+                        all_faq_tags: true,
                         selectedFaqTags: [],
                     }
                 },
@@ -111,6 +115,7 @@
 
                 computed: {
                 },
+
                 methods: { 
                     changeData(key, type) {
                         let prevalues = this.get('shortCode')[type];
@@ -120,13 +125,34 @@
                             prevalues.splice(prevalues.indexOf(key), 1);
                         }
                     },
-                },
 
-                hooks: {
-                    mounted: function() {
-                        console.log("APP Mounted");
-                    }
+                nf_insertSortCode() {
+                         let shortCode = this.get('shortCode');
+                        let shortCodeParts = [
+                            'mrk_faq',
+                            "display='" + shortCode.nf_display + "'"
+                        ];
+                        
+                        if(shortCode.nf_display == 'grid_items') {
+                            shortCodeParts.push('per_grid='+shortCode.per_grid);
+                        }
+                        
+                        if(!shortCode.all_faq_cats && shortCode.selectedFaqCats.length) {
+                            shortCodeParts.push( "faq_cat='"+ shortCode.selectedFaqCats.toLocaleString()+"'");
+                        }
+                        if(!shortCode.all_faq_tags && shortCode.selectedFaqTags.length) {
+                            shortCodeParts.push( "faq_tag='"+ shortCode.selectedFaqTags.toLocaleString()+"'");
+                        }
+                        
+                        let shortcodeString = '['+shortCodeParts.join(' ')+']';
+                        currentNFEditor.insertContent(shortcodeString);
+                        mainApp.closeModal();
                 }
+
+            }
+
+
+                
             })
         },
 
