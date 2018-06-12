@@ -64,6 +64,8 @@ div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group {
 
 div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group:last-of-type {
   border-bottom: none;
+  padding: 0;
+  margin: 0;
 }
 
 div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group .nf_form_group > label {

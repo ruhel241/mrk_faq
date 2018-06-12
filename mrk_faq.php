@@ -2,7 +2,7 @@
 /**
  * @link              https://wpmanageninja.com
  * @since             1.0.0
- * @package           mrk_faq
+ * @package           MRK FAQ
  *
  * @wordpress-plugin
  * Plugin Name:       MRK FAQ
