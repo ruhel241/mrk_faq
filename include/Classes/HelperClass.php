@@ -31,24 +31,24 @@ class HelperClass
 
 
 		public static function getNFDisplayTypes()
-		{
+		{	
 			return array(
 				'default' 		=> array(
 					'label' => 'Default'
 				),
 
-				'simple_faq' 		=> array(
+				'simple_one' 		=> array(
 					'label' => 'Simple One'
 				),
 
-				'simple_two_faq' 		=> array(
+				'simple_two' 		=> array(
 					'label' => 'Simple Two'
 				),
 
-				'simple_three_faq' 		=> array(
+				'simple_three' 		=> array(
 					'label' => 'Simple Three'
 				),
-				'grid_items' 		=> array(
+				'grid' 		=> array(
 					'label' => 'Multiple Grid Style'
 				)
 			);

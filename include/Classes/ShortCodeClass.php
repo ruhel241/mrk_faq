@@ -14,8 +14,6 @@ class ShortCodeClass
 		 'display'  => 'default',
 		 'post_type'=> \MRK_FAQ\Classes\PostTypeClass::$postTypeName,
 		 'limit'    =>  -1,
-		 // 'taxonomy' => false,
-		 // 'category' => false,
 		 'faq_cat'  => false,
 		 'faq_tag'  => false,
 		 'relation' => 'OR',
@@ -37,12 +35,10 @@ class ShortCodeClass
 	public static function getViewNameByDisplay($display)
 	{
 		$displayArray = array(
-			'simple' 	  => 'simple_faq',
+			'simple_one'  => 'simple_faq',
 			'simple_two'  => 'simple_two_faq',
 			'simple_three'=> 'simple_three_faq',
 			'grid'  	  => 'grid_items',
-			// 'theme_two' => 'theme_two_faq',
-			// 'theme_three' => 'theme_three_faq',
 		);
 
 		$return = 'default';

@@ -25,7 +25,7 @@
                                     </div>
                                 </div>
                                 <div class="nf_form_group">
-                                    <label m-if="shortCode.nf_display == 'grid_items'">
+                                    <label m-if="shortCode.nf_display == 'grid'">
                                         Item Per Grid
                                         <input type="number" max="3" min="1" m-model="shortCode.per_grid" />
                                     </label>
@@ -133,7 +133,7 @@
                             "display='" + shortCode.nf_display + "'"
                         ];
                         
-                        if(shortCode.nf_display == 'grid_items') {
+                        if(shortCode.nf_display == 'grid') {
                             shortCodeParts.push('per_grid='+shortCode.per_grid);
                         }
                         
