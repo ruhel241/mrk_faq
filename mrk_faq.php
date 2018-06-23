@@ -31,7 +31,6 @@ class MRK_FAQ_Main_Class
 	{
 		$this->commonHooks();
 		$this->adminHooks();
-		
 		$this->loadTextDomain();
 	}
  
@@ -45,6 +44,11 @@ class MRK_FAQ_Main_Class
 		add_shortcode('mrk_faq', array($shortCodeClass, 'register') ); 
 
 		add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
+		
+		add_action( 'widgets_init', function () {
+			register_widget( 'MRK_FAQ\Classes\WidgetClass' );
+		});
+
 	}
 
 

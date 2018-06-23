@@ -27,16 +27,12 @@ class TinyMceClass
 		add_filter( 'mce_buttons', array( self::class, 'addToolbarButton')  );
 	}
 
-
-
-
 	
 	public static function addTinymcePlugin($plugin_array)
 	{
 		
 		wp_enqueue_style( 'mrk_faq_mce_css', MRK_FAQ_PLUGIN_URL . 'assets/tinymce-button.css' );
-		wp_enqueue_script( 'mrk_faq_moonjs', MRK_FAQ_PLUGIN_URL . 'assets/libs/moon.min.js', array( 'jquery' ),
-			'0.11.0' );
+		wp_enqueue_script( 'mrk_faq_moonjs', MRK_FAQ_PLUGIN_URL . 'assets/libs/moon.min.js', array( 'jquery' ), '0.11.0' );
 
 		$plugin_array['mrk_faq_mce_class'] = MRK_FAQ_PLUGIN_URL . 'assets/tinymce-button.js';
 		add_action( 'admin_footer', array( self::class, 'localizeVars' ) );
@@ -77,12 +73,6 @@ class TinyMceClass
         </script>
 		<?php
 	}
-
-
-
-
-
-
 
 
 }
