@@ -86,13 +86,13 @@ $nf_graycolor: #ddd;
 /*Simple two FAQ*/
 .nf_simple_two_single {
 	padding: 5px;
+	border-bottom: solid 1px $nf_graycolor;
 	&:hover {
 		background: #f5f4eb;
 	}
 	.faq_title{
 	    cursor: pointer;
 	    margin: 0;
-	    border-bottom: solid 1px $nf_graycolor;
 	    padding: 7px;
 	    padding-bottom: 10px;
 		.nf_simple_up_icon::after {

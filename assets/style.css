@@ -87,6 +87,7 @@
 
 .nf_simple_two_single {
   padding: 5px;
+  border-bottom: solid 1px #ddd;
 }
 
 .nf_simple_two_single:hover {
@@ -96,7 +97,6 @@
 .nf_simple_two_single .faq_title {
   cursor: pointer;
   margin: 0;
-  border-bottom: solid 1px #ddd;
   padding: 7px;
   padding-bottom: 10px;
 }
