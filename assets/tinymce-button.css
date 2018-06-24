@@ -19,9 +19,7 @@ div#mrk_faq_pop_up .mrk_pop_container {
   position: fixed;
   width: 40%;
   min-width: 600px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  top: calc(50vh + 16px);
+  top: 150px;
   left: 0;
   right: 0;
   background: oldlace;
@@ -29,8 +27,6 @@ div#mrk_faq_pop_up .mrk_pop_container {
   color: black;
   margin: 0 auto;
   border-radius: 6px;
-  max-height: 80vh;
-  overflow: scroll;
 }
 
 @media all and (max-width: 767px) {
