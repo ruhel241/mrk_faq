@@ -153,7 +153,7 @@ module.exports = __webpack_require__(6);
                     mainApp.showModal(editor);
                     // alert("Opened");
                 });
-                jQuery('.mrkFAQ_pop_close').on('click', function () {
+                jQuery('.mrkFAQ_pop_close, .mrk_faq_pop_shadow').on('click', function () {
                     mainApp.closeModal();
                 });
             });

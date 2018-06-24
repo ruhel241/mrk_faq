@@ -15,30 +15,30 @@ div#mrk_faq_pop_up {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 100050;
+    z-index: 100150;
   }
 
   .mrk_pop_container {
-    position: absolute;
-    width: 40%;
-    min-width: 600px;
-    // max-width: 100%;
-    top: 150px;
-    left: 0%;
-    right: 0%;
-    background: oldlace;
-    z-index: 100100;
-    color: black;
-    margin: 0 auto;
-    border-radius: 6px;
+	  position: fixed;
+	  width: 40%;
+	  min-width: 600px;
+	  transform: translateY(-50%);
+	  top: calc(50vh + 16px);
+	  left: 0;
+	  right: 0;
+	  background: oldlace;
+	  z-index: 100200;
+	  color: black;
+	  margin: 0 auto;
+	  border-radius: 6px;
+	  max-height: 80vh;
+	  overflow: scroll;
+	  @media all and (max-width: 767px) {
+		  min-width: 95%;
+	  }
 
     .mrk_faq_header {
-      // padding: 5px 0px 5px 15px;
-      // color: #6c6b6b;
-      // border-bottom: 1px solid #ddd;
-      // font-size: 17px;
-      // line-height: 30px;
-        padding: 5px 0px 5px 15px;
+        padding: 5px 0 5px 15px;
 	    color: #6c6b6b;
 	    border-bottom: 1px solid #ddd;
 	    font-size: 21px;
@@ -88,69 +88,20 @@ div#mrk_faq_pop_up {
 
 
 	.nf_pop_footer{
-
 		.nf_insert_button{
 			float: right;
 		    position: relative;
-		    /* top: 10px; */
 		    bottom: 13px;
-		    /* left: 10px; */
 		    right: 25px;
-		    /* width: 100%; */
 		    padding: 10px;
 		    border-radius: 6px;
 		    background-color: #428bca;
 		    color: white;
-		    // cursor: pointer;
+			cursor: pointer;
 		    border-color: #357ebd;
 		}
-
 	}
-
-
-
-
-
-    // .trendy_pop_body {
-    //   padding-top: 10px;
-    //   .tres_options_group {
-    //     display: block;
-    //     width: auto;
-    //     overflow: hidden;
-    //     margin-bottom: 10px;
-    //     background: #fdf9f9;
-    //     padding: 10px 20px;
-    //     box-shadow: 0px 1px 1px 1px #d2d2d2;
-    //   }
-    //   .tres_form_group {
-    //     margin-bottom: 15px;
-    //     > label {
-    //       font-size: 14px;
-    //       font-weight: bold;
-    //       display: block;
-    //       margin-bottom: 5px;
-    //     }
-    //   }
-      
-    //   .tres_inline_form_items {
-    //     display: block;
-    //     width: 100%;
-    //     label {
-    //       margin-right: 10px;
-    //     }
-    //   }
-      
-    // }
-
-    // .trendy_pop_footer {
-    //   display: block;
-    //   background: #f5f5f5;
-    //   padding: 10px;
-    //   text-align: right;
-    // }
-    
   }
-  
 }
 
 

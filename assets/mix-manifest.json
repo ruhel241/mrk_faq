@@ -2,6 +2,6 @@
     "/custom.js": "/custom.js",
     "/style.css": "/style.css",
     "/tinymce-button.css": "/tinymce-button.css",
-    "/tinymce-button.js": "/tinymce-button.js",
-    "/admin.css": "/admin.css"
+    "/admin.css": "/admin.css",
+    "/tinymce-button.js": "/tinymce-button.js"
 }

@@ -55,12 +55,12 @@ class TinyMceClass
 		
 		$nfCategories    = HelperClass::getNFTermsFormatted( array(
 			'taxonomy'   => PostTypeClass::$faqCatName,
-			'hide_empty' => false,
+			'hide_empty' => true,
 		) );
 
 		$nfTags    = HelperClass::getNFTermsFormatted( array(
 			'taxonomy'   => PostTypeClass::$faqTagName,
-			'hide_empty' => false,
+			'hide_empty' => true,
 		) );
 
 		?>

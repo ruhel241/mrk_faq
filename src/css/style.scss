@@ -1,3 +1,6 @@
+/* variables */
+$nf_graycolor: #ddd;
+
 /*common style*/
 .ninja_faq_wrapper_group{
     display: block;
@@ -8,11 +11,6 @@
 		padding: 0;
 	}
 }
-
-$nf_graycolor: #ddd;
-
-
-
 
 /*common style end*/
 
@@ -55,7 +53,6 @@ $nf_graycolor: #ddd;
 		margin-bottom: 10px;
 	    display: block;
 	    padding-left: 30px;
-	    text-align: justify;
 	    padding-bottom: 30px;
 	}
 }
@@ -78,7 +75,6 @@ $nf_graycolor: #ddd;
    		background: white;
 	    padding: 15px;
 	    display: block;
-	    text-align: justify;
 	}
 }
 
@@ -108,7 +104,6 @@ $nf_graycolor: #ddd;
 	}
 	.faq_content{
 		padding: 10px;
-    	text-align: justify;
     	display: block;
 	}
 }
@@ -124,13 +119,8 @@ $nf_graycolor: #ddd;
     }
 
  .faq_three_title {
-  	margin: 0px 0px 10px 0px;
+  	margin: 0 0 10px 0;
   }
-
-  .faq_three_content {
-
-  }
- 
 }
 
 
@@ -147,6 +137,9 @@ $nf_graycolor: #ddd;
 		&:nth-child(3n+1){
 			clear: both;
 		}
+		@media all and (max-width: 767px) {
+			width: 100%;
+		}
 	}
 
 	.nf_grid_2 {
@@ -154,6 +147,12 @@ $nf_graycolor: #ddd;
 		display: block;
 		float: left;
 		margin-bottom: 30px;
+		&:nth-child(2n+1){
+			clear: both;
+		}
+		@media all and (max-width: 767px) {
+			width: 100%;
+		}
 	}
 
 	.nf_grid_1 {

@@ -13,6 +13,7 @@ class WidgetClass extends \WP_Widget
 		parent::__construct( 'mrk_faq_widget', 
 			esc_html__('Ninja FAQ Widget','mrk_faq'), 
 			array(
+				'classname' => 'mrk_faq_widget',
 				'description' => esc_html__('Ninja FAQ, You can add your website', 'mrk_faq')
 			)
 		);
@@ -51,12 +52,12 @@ class WidgetClass extends \WP_Widget
 		
 		$nfCategories    = HelperClass::getNFTermsFormatted( array(
 			'taxonomy'   => PostTypeClass::$faqCatName,
-			'hide_empty' => false,
+			'hide_empty' => true,
 		) );
 
 		$nfTags    = HelperClass::getNFTermsFormatted( array(
 			'taxonomy'   => PostTypeClass::$faqTagName,
-			'hide_empty' => false,
+			'hide_empty' => true,
 		) );
 
 		include MRK_FAQ_PLUGIN_DIR_PATH . "include/templates/widgets/ninja_faq_widget.php";
