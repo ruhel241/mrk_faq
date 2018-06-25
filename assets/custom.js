@@ -84,8 +84,8 @@ jQuery(document).ready(function () {
 		jQuery(this).find(".faq_add_icon").toggle();
 		jQuery(this).find(".faq_minus_icon").toggle();
 
-		jQuery(this).find(".nf_simple_up_icon").toggle();
-		jQuery(this).find(".nf_simple_down_icon").toggle();
+		jQuery(this).find(".fn_simple_up_icon").toggle();
+		jQuery(this).find(".fn_simple_down_icon").toggle();
 	});
 });
 

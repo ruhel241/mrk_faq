@@ -1,22 +1,22 @@
 <?php
 
-	function MRK_FAQRenderItems($attributes)
+	function FAQ_NinjaRenderItems($attributes)
 	{
 
 		extract($attributes);
 		
 		$taxonomies = array(
-			\MRK_FAQ\Classes\PostTypeClass::$faqCatName => ( $faq_cat ) ? explode(',', $faq_cat) : array(),
-			\MRK_FAQ\Classes\PostTypeClass::$faqTagName => ( $faq_tag ) ?  explode(',', $faq_tag) : array()
+			\FAQ_NINJA\Classes\PostTypeClass::$faqCatName => ( $faq_cat ) ? explode(',', $faq_cat) : array(),
+			\FAQ_NINJA\Classes\PostTypeClass::$faqTagName => ( $faq_tag ) ?  explode(',', $faq_tag) : array()
 		);
 
-		$faqItems = mrkFaqGetItems($taxonomies, $limit, $relation, $attributes, $post_type);
+		$faqItems = FaqNinjaGetItems($taxonomies, $limit, $relation, $attributes, $post_type);
 
 		if(!$display){
 			$display = 'default';
 		}
 
-		return MRK_FAQ\Classes\HelperClass::makeView($view_file, array(
+		return FAQ_NINJA\Classes\HelperClass::makeView($view_file, array(
 			'faqs'  	=> $faqItems,
 			'display'   => $display,
 			'color' 	=> $color,
@@ -27,7 +27,7 @@
 
 
 
-	function mrkFaqGetItems($taxonomies, $limit = -1 , $tax_relation = 'AND', $attributes, $post_type )
+	function FaqNinjaGetItems($taxonomies, $limit = -1 , $tax_relation = 'AND', $attributes, $post_type )
 	{
 		$taxQuery = array(
 			'relation' => $tax_relation,
@@ -60,7 +60,7 @@
 		}
 
 
-		$queryArgs = apply_filters('mrk_faq_post_query_args', $queryArgs, $attributes);
+		$queryArgs = apply_filters('faq_ninja_post_query_args', $queryArgs, $attributes);
 		$faqs = get_posts($queryArgs);
 
 

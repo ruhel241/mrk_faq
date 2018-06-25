@@ -1,9 +1,9 @@
-<?php
+<?php namespace FAQ_NINJA\Classes;
 
 /**
- * @package MRK FAQ
+ * @package FAQ NINJA
  */
-namespace MRK_FAQ\Classes;
+
 
 class TinyMceClass 
 {
@@ -31,10 +31,10 @@ class TinyMceClass
 	public static function addTinymcePlugin($plugin_array)
 	{
 		
-		wp_enqueue_style( 'mrk_faq_mce_css', MRK_FAQ_PLUGIN_URL . 'assets/tinymce-button.css' );
-		wp_enqueue_script( 'mrk_faq_moonjs', MRK_FAQ_PLUGIN_URL . 'assets/libs/moon.min.js', array( 'jquery' ), '0.11.0' );
+		wp_enqueue_style( 'faq_ninja_mce_css', FAQ_NINJA_PLUGIN_URL . 'assets/tinymce-button.css' );
+		wp_enqueue_script( 'faq_ninja_moonjs', FAQ_NINJA_PLUGIN_URL . 'assets/libs/moon.min.js', array( 'jquery' ), '0.11.0' );
 
-		$plugin_array['mrk_faq_mce_class'] = MRK_FAQ_PLUGIN_URL . 'assets/tinymce-button.js';
+		$plugin_array['faq_ninja_mce_class'] = FAQ_NINJA_PLUGIN_URL . 'assets/tinymce-button.js';
 		add_action( 'admin_footer', array( self::class, 'localizeVars' ) );
 		return $plugin_array;
 	}
@@ -43,7 +43,7 @@ class TinyMceClass
 
 	public static function addToolbarButton($buttons)
 	{
-		array_push( $buttons, 'mrk_faq_mce_class' );
+		array_push( $buttons, 'faq_ninja_mce_class' );
 		return $buttons;
 	}
 
@@ -51,24 +51,24 @@ class TinyMceClass
 
 	public static function localizeVars() {
 	
-		$nfdisplayTypes = HelperClass::getNFDisplayTypes(); 
+		$fndisplayTypes = HelperClass::getFaqNinjaDisplayTypes(); 
 		
-		$nfCategories    = HelperClass::getNFTermsFormatted( array(
+		$fnCategories    = HelperClass::getFaqNinjaTermsFormatted( array(
 			'taxonomy'   => PostTypeClass::$faqCatName,
 			'hide_empty' => true,
 		) );
 
-		$nfTags    = HelperClass::getNFTermsFormatted( array(
+		$fnTags    = HelperClass::getFaqNinjaTermsFormatted( array(
 			'taxonomy'   => PostTypeClass::$faqTagName,
 			'hide_empty' => true,
 		) );
 
 		?>
         <script type="text/javascript">
-          var nf_MceVars = {
-                nfdisplayTypes: <?php echo json_encode( $nfdisplayTypes ); ?>,
-                nfCategories: <?php echo json_encode($nfCategories); ?>,
-                nfTags: <?php echo json_encode($nfTags); ?>,
+          var fn_MceVars = {
+                fndisplayTypes: <?php echo json_encode( $fndisplayTypes ); ?>,
+                fnCategories: <?php echo json_encode($fnCategories); ?>,
+                fnTags: <?php echo json_encode($fnTags); ?>,
             } 
         </script>
 		<?php

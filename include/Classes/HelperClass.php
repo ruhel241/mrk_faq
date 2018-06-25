@@ -1,9 +1,9 @@
-<?php
+<?php namespace FAQ_NINJA\Classes;
+
 
 /**
- * @package MRK FAQ
+ * @package FAQ NINJA
  */
-namespace MRK_FAQ\Classes;
 
 class HelperClass
 {
@@ -13,7 +13,7 @@ class HelperClass
 			$file = sanitize_file_name($file);
 			$file  = str_replace('.', DIRECTORY_SEPARATOR, $file);
 			extract($data);
-			$filePath = MRK_FAQ_PLUGIN_DIR_PATH . 'include/templates/' .$file. '.php'; 
+			$filePath = FAQ_NINJA_PLUGIN_DIR_PATH . 'include/templates/' .$file. '.php'; 
 			if(!file_exists($filePath)){
 				return '';
 			}
@@ -30,23 +30,23 @@ class HelperClass
 	
 
 
-		public static function getNFDisplayTypes()
+		public static function getFaqNinjaDisplayTypes()
 		{	
 			return array(
-				'default' 		=> array(
+				'default' 	=> array(
 					'label' => 'Default'
 				),
 
-				'simple_one' 		=> array(
-					'label' => 'Simple One'
+				'simple_one' => array(
+					'label'  => 'Simple One'
 				),
 
-				'simple_two' 		=> array(
-					'label' => 'Simple Two'
+				'simple_two' => array(
+					'label'  => 'Simple Two'
 				),
 
-				'simple_three' 		=> array(
-					'label' => 'Simple Three'
+				'simple_three' => array(
+					'label'    => 'Simple Three'
 				),
 				'grid' 		=> array(
 					'label' => 'Multiple Grid Style'
@@ -54,9 +54,32 @@ class HelperClass
 			);
 		}
 
+	// Widget Display Types 
+		public static function getFaqNinjaWidgetDisplay()
+		{	
+			return array(
+				'default' 	=> array(
+					'label' => 'Default'
+				),
+
+				'simple_one' => array(
+					'label'  => 'Simple One'
+				),
+
+				'simple_two' => array(
+					'label'  => 'Simple Two'
+				),
+
+				'simple_three' => array(
+					'label'    => 'Simple Three'
+				),
+				
+			);
+		}
 
 
-		public static function getNFTermsFormatted($args = array())
+
+		public static function getFaqNinjaTermsFormatted($args = array())
 		{
 			$terms = get_terms($args);
 			$formatted = array();

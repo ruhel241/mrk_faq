@@ -2,13 +2,13 @@
 
 /*common style*/
 
-.ninja_faq_wrapper_group {
+.faq_ninja_wrapper_group {
   display: block;
   overflow: hidden;
   width: 100%;
 }
 
-.ninja_faq_wrapper_group p {
+.faq_ninja_wrapper_group p {
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@
 
 /*default*/
 
-.nf_single_faq .faq_title {
+.fn_single_faq .faq_title {
   border-bottom: solid 1px #ddd;
   margin: 0 0 8px 0;
   cursor: pointer;
@@ -26,7 +26,7 @@
   padding-left: 39px;
 }
 
-.nf_single_faq .faq_title .faq_add_icon::before {
+.fn_single_faq .faq_title .faq_add_icon::before {
   background: none repeat scroll 0 0 #666;
   color: #fff;
   content: "+";
@@ -39,7 +39,7 @@
   line-height: 30px;
 }
 
-.nf_single_faq .faq_title .faq_minus_icon::before {
+.fn_single_faq .faq_title .faq_minus_icon::before {
   background: none repeat scroll 0 0 #666;
   color: #fff;
   content: "-";
@@ -52,7 +52,7 @@
   line-height: 30px;
 }
 
-.nf_single_faq .faq_content {
+.fn_single_faq .faq_content {
   margin-bottom: 10px;
   display: block;
   padding-left: 30px;
@@ -61,23 +61,23 @@
 
 /*simple*/
 
-.nf_simple_faq {
+.fn_simple_faq {
   background: #f8f8f8;
   border: solid 1px #ddd;
 }
 
-.nf_simple_faq .faq_title {
+.fn_simple_faq .faq_title {
   border-bottom: 1px solid #ddd;
   margin: 0;
   padding: 10px;
   cursor: pointer;
 }
 
-.nf_simple_faq .faq_title:hover {
+.fn_simple_faq .faq_title:hover {
   background: white;
 }
 
-.nf_simple_faq .faq_content {
+.fn_simple_faq .faq_content {
   background: white;
   padding: 15px;
   display: block;
@@ -85,115 +85,115 @@
 
 /*Simple two FAQ*/
 
-.nf_simple_two_single {
+.fn_simple_two_single {
   padding: 5px;
   border-bottom: solid 1px #ddd;
 }
 
-.nf_simple_two_single:hover {
+.fn_simple_two_single:hover {
   background: #f5f4eb;
 }
 
-.nf_simple_two_single .faq_title {
+.fn_simple_two_single .faq_title {
   cursor: pointer;
   margin: 0;
   padding: 7px;
   padding-bottom: 10px;
 }
 
-.nf_simple_two_single .faq_title .nf_simple_up_icon::after {
+.fn_simple_two_single .faq_title .fn_simple_up_icon::after {
   content: "+";
   position: relative;
   float: right;
 }
 
-.nf_simple_two_single .faq_title .nf_simple_down_icon::after {
+.fn_simple_two_single .faq_title .fn_simple_down_icon::after {
   content: "-";
   position: relative;
   float: right;
 }
 
-.nf_simple_two_single .faq_content {
+.fn_simple_two_single .faq_content {
   padding: 10px;
   display: block;
 }
 
 /*Simple three FAQ*/
 
-.nf_simple_three_single {
+.fn_simple_three_single {
   border-bottom: solid 1px #ddd;
   padding-bottom: 30px;
   margin: 20px;
 }
 
-.nf_simple_three_single:last-of-type {
+.fn_simple_three_single:last-of-type {
   border-bottom: none;
 }
 
-.nf_simple_three_single .faq_three_title {
+.fn_simple_three_single .faq_three_title {
   margin: 0 0 10px 0;
 }
 
 /* grid items */
 
-.nf_grid_faq .nf_grid_3 {
+.fn_grid_faq .fn_grid_3 {
   width: 33%;
   display: block;
   float: left;
   margin-bottom: 30px;
 }
 
-.nf_grid_faq .nf_grid_3:nth-child(3n+1) {
+.fn_grid_faq .fn_grid_3:nth-child(3n+1) {
   clear: both;
 }
 
 @media all and (max-width: 767px) {
-  .nf_grid_faq .nf_grid_3 {
+  .fn_grid_faq .fn_grid_3 {
     width: 100%;
   }
 }
 
-.nf_grid_faq .nf_grid_2 {
+.fn_grid_faq .fn_grid_2 {
   width: 50%;
   display: block;
   float: left;
   margin-bottom: 30px;
 }
 
-.nf_grid_faq .nf_grid_2:nth-child(2n+1) {
+.fn_grid_faq .fn_grid_2:nth-child(2n+1) {
   clear: both;
 }
 
 @media all and (max-width: 767px) {
-  .nf_grid_faq .nf_grid_2 {
+  .fn_grid_faq .fn_grid_2 {
     width: 100%;
   }
 }
 
-.nf_grid_faq .nf_grid_1 {
+.fn_grid_faq .fn_grid_1 {
   width: 100%;
   display: block;
   float: none;
 }
 
-.nf_grid_faq .nf_grid_1 .faq_grid_content {
+.fn_grid_faq .fn_grid_1 .faq_grid_content {
   padding-top: 20px;
   padding-right: 30px;
   line-height: 1.5em;
 }
 
-.nf_grid_faq .nf_grid {
+.fn_grid_faq .fn_grid {
   display: block;
   overflow: hidden;
   padding: 5px;
 }
 
-.nf_grid_faq .faq_grid_title {
+.fn_grid_faq .faq_grid_title {
   padding: 0;
   margin: 0;
 }
 
-.nf_grid_faq .faq_grid_content {
+.fn_grid_faq .faq_grid_content {
   padding-top: 30px;
   padding-right: 30px;
   padding-bottom: 30px;

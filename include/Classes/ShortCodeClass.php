@@ -1,18 +1,19 @@
-<?php
+<?php namespace FAQ_NINJA\Classes;
+
 /**
- * @package MRK FAQ
+ * @package FAQ NINJA
  */
 
-namespace MRK_FAQ\Classes;
+
 
 class ShortCodeClass 
 {
 
 	public static function register( $atts ) 
 	{
-		$defaults = apply_filters('mrk_faq_shortcode_defaults', array(
+		$defaults = apply_filters('faq_ninja_shortcode_defaults', array(
 		 'display'  => 'default',
-		 'post_type'=> \MRK_FAQ\Classes\PostTypeClass::$postTypeName,
+		 'post_type'=> \FAQ_NINJA\Classes\PostTypeClass::$postTypeName,
 		 'limit'    =>  -1,
 		 'faq_cat'  => false,
 		 'faq_tag'  => false,
@@ -25,9 +26,9 @@ class ShortCodeClass
 
 		$attributes  = shortcode_atts($defaults, $atts);
 		$attributes['view_file'] = self::getViewNameByDisplay( $attributes['display'] );
-		$attributes 			 = apply_filters('mrk_faq_shortcode_atts', $attributes );	
+		$attributes 			 = apply_filters('faq_ninja_shortcode_atts', $attributes );	
 
-		return MRK_FAQRenderItems( $attributes );
+		return FAQ_NinjaRenderItems( $attributes );
 	}
 
 
@@ -47,7 +48,7 @@ class ShortCodeClass
 			$return = $displayArray[ $display ];
 		}
 
-		return apply_filters( 'mrk_faq_get_view_name_by_display', $return , $display );
+		return apply_filters( 'faq_ninja_get_view_name_by_display', $return , $display );
 	}
 
 

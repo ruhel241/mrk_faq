@@ -1,9 +1,9 @@
-.mce-i-mrk_faq_mce_class {
+.mce-i-faq_ninja_mce_class {
   background-image: url(./images/mce_icon.png?e06f20379098465b67ad0f2c9721a246);
   background-size: contain;
 }
 
-div#mrk_faq_pop_up .mrk_faq_pop_shadow {
+div#faq_ninja_pop_up .faq_ninja_pop_shadow {
   background: #000;
   opacity: 0.7;
   filter: alpha(opacity=70);
@@ -15,7 +15,7 @@ div#mrk_faq_pop_up .mrk_faq_pop_shadow {
   z-index: 100150;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container {
+div#faq_ninja_pop_up .faq_ninja_pop_container {
   position: fixed;
   width: 40%;
   min-width: 600px;
@@ -30,12 +30,12 @@ div#mrk_faq_pop_up .mrk_pop_container {
 }
 
 @media all and (max-width: 767px) {
-  div#mrk_faq_pop_up .mrk_pop_container {
+  div#faq_ninja_pop_up .faq_ninja_pop_container {
     min-width: 95%;
   }
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_header {
+div#faq_ninja_pop_up .faq_ninja_pop_container .faq_ninja_header {
   padding: 5px 0 5px 15px;
   color: #6c6b6b;
   border-bottom: 1px solid #ddd;
@@ -46,7 +46,7 @@ div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_header {
   margin-top: 10px;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_header span.mrkFAQ_pop_close {
+div#faq_ninja_pop_up .faq_ninja_pop_container .faq_ninja_header span.faq_ninja_pop_close {
   float: right;
   border-left: 1px solid #ddd;
   padding-left: 10px;
@@ -56,36 +56,36 @@ div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_header span.mrkFAQ_pop_close {
   padding-right: 10px;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body {
+div#faq_ninja_pop_up .faq_ninja_pop_container .faq_ninja_pop_body {
   padding: 20px;
   border-bottom: solid 1px #ddd;
   margin-bottom: 26px;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group {
+div#faq_ninja_pop_up .faq_ninja_pop_container .faq_ninja_pop_body .fn_options_group {
   border-bottom: solid 1px #ddd;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group:last-of-type {
+div#faq_ninja_pop_up .faq_ninja_pop_container .faq_ninja_pop_body .fn_options_group:last-of-type {
   border-bottom: none;
   padding: 0;
   margin: 0;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group .nf_form_group > label {
+div#faq_ninja_pop_up .faq_ninja_pop_container .faq_ninja_pop_body .fn_options_group .fn_form_group > label {
   display: inline-block;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .mrk_faq_pop_body .nf_options_group .nf_form_group .nf_inline_form_items {
+div#faq_ninja_pop_up .faq_ninja_pop_container .faq_ninja_pop_body .fn_options_group .fn_form_group .fn_inline_form_items {
   padding-bottom: 15px;
 }
 
-div#mrk_faq_pop_up .mrk_pop_container .nf_pop_footer .nf_insert_button {
+div#faq_ninja_pop_up .faq_ninja_pop_container .fn_pop_footer .fn_insert_button {
   float: right;
   position: relative;
   bottom: 13px;

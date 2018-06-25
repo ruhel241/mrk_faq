@@ -1,8 +1,8 @@
 /* variables */
-$nf_graycolor: #ddd;
+$fn_graycolor: #ddd;
 
 /*common style*/
-.ninja_faq_wrapper_group{
+.faq_ninja_wrapper_group{
     display: block;
     overflow: hidden;
     width: 100%;
@@ -15,9 +15,9 @@ $nf_graycolor: #ddd;
 /*common style end*/
 
 /*default*/
-.nf_single_faq {
+.fn_single_faq {
 	.faq_title {
-	    border-bottom: solid 1px $nf_graycolor;
+	    border-bottom: solid 1px $fn_graycolor;
 	    margin: 0 0 8px 0;
 	    cursor: pointer;
 	    padding-bottom: 10px;
@@ -59,11 +59,11 @@ $nf_graycolor: #ddd;
 
 
 /*simple*/
-.nf_simple_faq {
+.fn_simple_faq {
    background: #f8f8f8;
-   border: solid 1px $nf_graycolor;
+   border: solid 1px $fn_graycolor;
 	.faq_title {
-	    border-bottom: 1px solid $nf_graycolor;
+	    border-bottom: 1px solid $fn_graycolor;
 	    margin: 0;
 	    padding: 10px;
 	    cursor: pointer;
@@ -80,9 +80,9 @@ $nf_graycolor: #ddd;
 
 
 /*Simple two FAQ*/
-.nf_simple_two_single {
+.fn_simple_two_single {
 	padding: 5px;
-	border-bottom: solid 1px $nf_graycolor;
+	border-bottom: solid 1px $fn_graycolor;
 	&:hover {
 		background: #f5f4eb;
 	}
@@ -91,12 +91,12 @@ $nf_graycolor: #ddd;
 	    margin: 0;
 	    padding: 7px;
 	    padding-bottom: 10px;
-		.nf_simple_up_icon::after {
+		.fn_simple_up_icon::after {
 			content: "+";
 		    position: relative;
 		    float: right;
 		}
-		.nf_simple_down_icon::after {
+		.fn_simple_down_icon::after {
 			content: "-";
 		    position: relative;
 		    float: right;
@@ -110,7 +110,7 @@ $nf_graycolor: #ddd;
 
 
 /*Simple three FAQ*/
-.nf_simple_three_single {
+.fn_simple_three_single {
  	border-bottom: solid 1px #ddd;
     padding-bottom: 30px;
     margin: 20px;
@@ -126,9 +126,9 @@ $nf_graycolor: #ddd;
 
 /* grid items */
 
-.nf_grid_faq {
+.fn_grid_faq {
 
-	.nf_grid_3 {
+	.fn_grid_3 {
 		width: 33%;
 		display: block;
 		float: left;
@@ -141,7 +141,7 @@ $nf_graycolor: #ddd;
 		}
 	}
 
-	.nf_grid_2 {
+	.fn_grid_2 {
 		width: 50%;
 		display: block;
 		float: left;
@@ -154,7 +154,7 @@ $nf_graycolor: #ddd;
 		}
 	}
 
-	.nf_grid_1 {
+	.fn_grid_1 {
 		width: 100%;
 		display: block;
 		float: none;
@@ -165,7 +165,7 @@ $nf_graycolor: #ddd;
 		}
 	}
 
-	.nf_grid {
+	.fn_grid {
 		display: block;
 	    overflow: hidden;
 	    padding: 5px;

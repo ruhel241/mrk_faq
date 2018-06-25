@@ -1,7 +1,7 @@
-<div class="ninja_faq_wrapper_group ninja_faq_<?php echo $display; ?>">
+<div class="faq_ninja_wrapper_group faq_ninja_<?php echo $display; ?>">
 	<?php foreach($faqs as $faq): ?>
 		<?php setup_postdata($faq); ?>
-		<div class="nf_single_faq nf_single_faq_<?php echo $faq->ID;?>">
+		<div class="fn_single_faq fn_single_faq_<?php echo $faq->ID;?>">
 			<h3 class="faq_title"> 
 				<span class="faq_add_icon"></span>
 				<span class="faq_minus_icon" style="display: none;"></span>
