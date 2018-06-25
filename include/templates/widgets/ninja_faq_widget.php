@@ -3,7 +3,6 @@
 	<input type="text" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo $title ; ?>" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
 </div>
 
-
 <div class="nf_widget_item">
 <label for="<?php echo esc_attr( $this->get_field_id( '_nf_display_widget' ) ); ?>"> <?php esc_attr_e( 'Display:', 'mrk_faq' ); ?> </label>
 	<select name="<?php echo esc_attr( $this->get_field_name( '_nf_display_widget' ) ); ?>" class="widefat" id="<?php echo esc_attr( $this->get_field_id( '_nf_display_widget' ) ); ?>">
@@ -12,7 +11,6 @@
         <?php endforeach; ?>
 	</select>
 </div>
-
 
 <div class="nf_widget_item">
 	<h4> <?php esc_attr_e( 'FAQ Categories:', 'mrk_faq' ); ?> </h4>

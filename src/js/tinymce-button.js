@@ -4,7 +4,7 @@
             jQuery('body').append(`
             <div style="display: none;" class="mrk_faq_shortcode_builder_pop_up" id="mrk_faq_pop_up">
                 <div class="mrk_faq_pop_shadow"></div>
-
+                
                 <div id="ninja_faq_moon" class="mrk_pop_container">
                     <div class="mrk_faq_header">
                         Insert Ninja FAQ Shortcode
@@ -12,13 +12,10 @@
                     </div>
 
                     <div class="mrk_faq_pop_body"> 
-
                             <div class="nf_options_group">
                                 <div class="nf_form_group">
                                     <label> FAQ Display Type </label>
                                     <div class="nf_inline_form_items">
-
-
                                         <label m-for="nf_display, nf_displaykey in nf_displays">
                                             <input name="display_type" m-model="shortCode.nf_display" m-literal:value="nf_displaykey" type="radio"> {{ nf_display.label }}
                                         </label>
@@ -31,7 +28,6 @@
                                     </label>
                                 </div>
                             </div> 
-
 
                             <div class="nf_options_group">
                                 <div class="nf_form_group">
@@ -74,13 +70,9 @@
                             </div>
                     </div>
 
-
                     <div class="nf_pop_footer">
                         <button m-on:click="nf_insertSortCode"  class="nf_insert_button" id=""> Insert Shortcode </button>
                     </div>
-                   
-
-
                 </div>
             </div>
         `);
@@ -126,8 +118,8 @@
                         }
                     },
 
-                nf_insertSortCode() {
-                         let shortCode = this.get('shortCode');
+                    nf_insertSortCode() {
+                        let shortCode = this.get('shortCode');
                         let shortCodeParts = [
                             'mrk_faq',
                             "display='" + shortCode.nf_display + "'"
@@ -147,12 +139,10 @@
                         let shortcodeString = '['+shortCodeParts.join(' ')+']';
                         currentNFEditor.insertContent(shortcodeString);
                         mainApp.closeModal();
+                    }
+
                 }
 
-            }
-
-
-                
             })
         },
 
